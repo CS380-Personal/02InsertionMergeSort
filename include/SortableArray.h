@@ -7,22 +7,19 @@
 // Purpose:    To define the header file for a sortable array
 //********************************************************
 
-
 #ifndef _SortableArray_H_
 #define _SortableArray_H_
 #include <iostream>
 #include <vector>
-//#include "SortableContainer.h"
-class SortAlgorithm;
+
 #include "Student.h"
 
-class SortableArray //: public SortableContainer
+class SortAlgorithm;
+
+class SortableArray 
 {
 
 public:
-
-	// SortableArray is a concrete implementation of SortableContainer
-	// this array is backed by an stl vector
 	
 	// constructor
 	SortableArray();
@@ -30,24 +27,26 @@ public:
 	// destructor
 	virtual ~SortableArray();
 
-	
 	// adds a new element to the back of the array
 	virtual bool pushBack(Student *val);
 
-
-	// SortableContainer
 	// returns the number of elements in the array
 	virtual int	count() const;
 
 	// returns the ith element of the array
-	//virtual Student * operator [](int index);
 	virtual Student * getItem(int index) const;
+
+	// set an item at a given location
 	virtual bool setItem(int index, Student *pItem);
+
+	// deallocate all items pointed to by the array
 	virtual void deallocateItems();
 
+	// sets the sort algorithm to be used
 	void setSortBehavior(SortAlgorithm *sortAlgorithm) 
 		{mpSortBehavior = sortAlgorithm;};
 
+	// Invoke sort algorithm on the array
 	void sort();
 	
 	//////////////////////
@@ -55,14 +54,13 @@ public:
 	// clears the array 
 	virtual void clear();
 
+	// Provide an << operator
 	friend std::ostream & operator << (std::ostream &os, const SortableArray &array);
 
 private:
 
-
 	SortAlgorithm *mpSortBehavior;
 	std::vector<Student*> m_arrayData;
-
 
 };
 

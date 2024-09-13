@@ -10,9 +10,6 @@
 #include "SortableArray.h"
 #include <vector>
 #include "SortAlgorithm.h"
-//typedef std::vector<ComparableItem*> VectorData;
-
-//#define ARRAY (*((VectorData*)m_arrayData))
 
 //********************************************************
 // Constructor: SortableArray
@@ -26,7 +23,6 @@
 //********************************************************
 SortableArray::SortableArray()
 {
-	//m_arrayData = new std::vector<ComparableItem*>();
 }
 
 
@@ -58,7 +54,6 @@ void SortableArray::deallocateItems()
 //********************************************************
 SortableArray::~SortableArray()
 {
-	//delete m_arrayData;
 	m_arrayData.clear();
 }
 
@@ -82,9 +77,9 @@ int SortableArray::count() const
 //********************************************************
 // Method:	pushBack
 //
-// Description: add an int to the end of the array
+// Description: add an item to the end of the array
 //
-// Parameters: val - the int to add
+// Parameters: pVal - the item to add
 //
 // Returned: none
 //	
@@ -137,9 +132,6 @@ bool SortableArray::setItem(int index, Student* pItem)
 	return true;
 }
 
-
-
-
 //********************************************************
 // Method:	clear
 //
@@ -154,7 +146,6 @@ void SortableArray::clear()
 {
 	(m_arrayData).clear();
 }
-
 
 //********************************************************
 // Method:	operator<<

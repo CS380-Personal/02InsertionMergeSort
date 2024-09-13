@@ -7,7 +7,6 @@
 // Purpose:    To define the implementation of a Student
 //********************************************************
 
-
 #include "Student.h"
 
 //********************************************************
@@ -54,7 +53,6 @@ Student::Student(int id, std::string fname, std::string lname)
 Student::~Student()
 {
 }
-
 
 // ComparableItem
 

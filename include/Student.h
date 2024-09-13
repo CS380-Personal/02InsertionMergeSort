@@ -9,11 +9,11 @@
 
 #ifndef _Student_H_
 #define _Student_H_
-//#include "ComparableItem.h"
+
 #include <iostream>
 #include <string>
 
-class Student //: public ComparableItem
+class Student 
 {
 public:
 	
@@ -26,7 +26,6 @@ public:
 	// destructor. Nothing to deallocate but is marked virtual to
 	// allow subclasses to deallocate data.
 	virtual ~Student();
-	
 
 	// allow Students to be comparable
 	virtual bool operator< ( Student const &right) const;

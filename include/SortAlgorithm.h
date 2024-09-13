@@ -7,16 +7,14 @@
 // Purpose:    To define the header file the Sort Algorithm
 //********************************************************
 
-
 #ifndef _SortAlgorithm_H_
 #define _SortAlgorithm_H_
 
 #include <string>
-//#include "ComparableItem.h"
 #include "Student.h"
 
 // This is weird syntactic sugar since
-// SortAlgorithm and SortableContainer need to
+// SortAlgorithm and SortableArray need to
 // reference each other.
 class SortableArray;
 
@@ -46,7 +44,6 @@ public:
 	// memory to deallocate.  This destructor is virtual to 
 	// allow a subclass to properly deallocate dynamic memory
 	virtual ~SortAlgorithm();
-
 
 	// the actual sort routine. Pass a SortableContainer
 	// and the data in the container will be sorted

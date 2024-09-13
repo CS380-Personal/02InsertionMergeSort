@@ -29,7 +29,7 @@
 // Returned:    none
 //	
 //********************************************************
-void	printArray(SortableArray &rcTheArray)
+void printArray(SortableArray &rcTheArray)
 {
 	Student *pStudent;
 	for(int i=0;i< rcTheArray.count();i++)
@@ -202,14 +202,14 @@ int main(int argc, char *argv[] )
 
   std::vector<SortAlgorithm *> cVecAlgos;
 
-	SortableArray cSortableArray, cOriginalArray;
-	bool bSorted;
-	int studentCount = 10;
+  SortableArray cSortableArray, cOriginalArray;
+  bool bSorted;
+  int studentCount = 10;
 	
-	if (3 == argc)
-	{
-		studentCount = atoi(argv[2]);
-	}
+  if (3 == argc)
+  {
+	studentCount = atoi(argv[2]);
+  }
 
   // ADD YOUR ALGORITHMS HERE
   cVecAlgos.push_back (new BubbleSort());
@@ -217,14 +217,12 @@ int main(int argc, char *argv[] )
   studentCount = loadFromFile(cOriginalArray, argv[1], studentCount);
   //writeToFile(cOriginalArray, "data/out.txt", 100000);
 
-	std::cerr<<"\nArray Size: "<< cOriginalArray.count() << std::endl << std::endl;
+  std::cerr<<"\nArray Size: "<< cOriginalArray.count() << std::endl << std::endl;
 	
   for(SortAlgorithm *pAlgo : cVecAlgos)
   {
-   
     for(auto dir : aDirs)
     {
-      
       std::cout << pAlgo->name() << " " << aDirStr[static_cast<int>(dir)] << std::endl;
 
       resetFromOriginal(cSortableArray, cOriginalArray);
@@ -252,5 +250,5 @@ int main(int argc, char *argv[] )
 
   cSortableArray.deallocateItems();
 
-	return EXIT_SUCCESS;
+  return EXIT_SUCCESS;
 }

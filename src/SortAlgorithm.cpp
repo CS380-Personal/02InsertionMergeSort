@@ -67,10 +67,23 @@ SortAlgorithm::~SortAlgorithm()
 {
 }
 
+//********************************************************
+// Method: needSwap
+//
+// Description: Determine if two items need to be swapped
+//              based on the direction
+//
+// Parameters: 	pLeft  - the left item
+//              pRight - the right item
+//
+// Returned:	true if items need to be swapped,
+//              false otherwise
+//		
+//********************************************************
 bool SortAlgorithm::needSwap(Student *pLeft, Student *pRight)
 {
 	return (Direction::ASC == getSortDirection() && *pLeft > *pRight) ||
-				(Direction::DESC == getSortDirection() && *pLeft < *pRight);
+		   (Direction::DESC == getSortDirection() && *pLeft < *pRight);
 }
 
 //********************************************************

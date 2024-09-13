@@ -7,7 +7,6 @@
 // Purpose:    To define the header file the Merge Sort 
 //********************************************************
 
-
 #ifndef _MergeSortAlgorithm_H_
 #define _MergeSortAlgorithm_H_
 

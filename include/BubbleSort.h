@@ -7,7 +7,6 @@
 // Purpose:    To define the header file the Bubble Sort 
 //********************************************************
 
-
 #ifndef _BubbleSortAlgorithm_H_
 #define _BubbleSortAlgorithm_H_
 

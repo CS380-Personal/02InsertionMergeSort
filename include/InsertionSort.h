@@ -7,7 +7,6 @@
 // Purpose:    To define the header file the Insertion Sort 
 //********************************************************
 
-
 #ifndef _InsertionSortAlgorithm_H_
 #define _InsertionSortAlgorithm_H_
 
