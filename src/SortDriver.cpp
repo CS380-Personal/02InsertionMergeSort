@@ -1,7 +1,7 @@
 //********************************************************
 // File name:  SortDriver.cpp
-// Author:     chadd williams
-// Date:       1/30/2023
+// Author:     chadd williams & Shereen Khoja
+// Date:       1/30/2025
 // Class:      CS380
 // Assignment: Basic Sorting Driver.
 // Purpose:    Validate and time various sort algorithms
